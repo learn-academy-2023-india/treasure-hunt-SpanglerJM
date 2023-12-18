@@ -1,10 +1,20 @@
-import React from "react"
+import React from 'react'
 
-const Square = () => {
+const Square = (props) => {
   return (
-    <>
-      <div className="square"></div>
-    </>
+    <div className='grid'>
+        {props.board.map((value, index) => {
+          return(
+            <main key={index}>
+              <div className='square' onClick={() => props.handleClick()}>
+                {value}
+              </div>
+            </main>
+          )
+        })}
+    </div>
   )
 }
 export default Square
+
+//git add README.md src
